@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  background-color: #000;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#solar-system {
+  position: relative;
+  width: 800px;
+  height: 800px;
+}
+#sun {
+  width: 60px;
+  height: 60px;
+  background-color: yellow;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 30px rgba(255, 255, 0, 0.5);
+}
+.orbit {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.planet-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  animation: rotate linear infinite;
+}
+.planet {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+#mercury-orbit { width: 120px; height: 120px; }
+#venus-orbit { width: 180px; height: 180px; }
+#earth-orbit { width: 250px; height: 250px; }
+#mars-orbit { width: 320px; height: 320px; }
+#jupiter-orbit { width: 450px; height: 450px; }
+#saturn-orbit { width: 580px; height: 580px; }
+#uranus-orbit { width: 680px; height: 680px; }
+#neptune-orbit { width: 780px; height: 780px; }
+
+#mercury { width: 10px; height: 10px; background-color: #888; }
+#venus { width: 15px; height: 15px; background-color: #e6e6a1; }
+#earth { width: 16px; height: 16px; background-color: #4ca6ff; }
+#mars { width: 14px; height: 14px; background-color: #ff6b3d; }
+#jupiter { width: 36px; height: 36px; background-color: #e0ae6f; }
+#saturn { width: 30px; height: 30px; background-color: #f4d47a; }
+#uranus { width: 26px; height: 26px; background-color: #b3e5fc; }
+#neptune { width: 24px; height: 24px; background-color: #82b1ff; }
+
+#mercury-container { animation-duration: 5s; }
+#venus-container { animation-duration: 8s; }
+#earth-container { animation-duration: 10s; }
+#mars-container { animation-duration: 12s; }
+#jupiter-container { animation-duration: 30s; }
+#saturn-container { animation-duration: 35s; }
+#uranus-container { animation-duration: 40s; }
+#neptune-container { animation-duration: 45s; }
