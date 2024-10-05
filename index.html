@@ -7,36 +7,58 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navbar -->
     <div class="navbar">
+        <div class="logo"><img src="images/pngwing.com.png" alt="NASA logo"></div>
 
+        <div class="second-logo"><img src="images/pngwing.com (1).png" alt="Logo"></div>
     </div>
-    <div id="solar-system">
-        <div id="sun"></div>
-        <div id="mercury-orbit" class="orbit">
-            <img src="./images/mercury.svg" id="mercury" class="planet" alt="Mercury">
+
+    <!-- Intro Section -->
+    <section class="intro">
+        <h1>Welcome to the  Planetary Orbits </h1>
+        <p>Explore the movements of planets. Click on each planet to learn more!</p>
+    </section>
+
+    <!-- Solar System Display -->
+    <section class="orrery-display">
+        <div id="solar-system">
+            <div id="sun"><img src="./images/pngwing.com (2).png" id="sun-image" class="" alt="Mercury">
+            </div>
+            <div id="mercury-orbit" class="orbit">
+                <img src="./images/mercury.svg" id="mercury" class="planet" alt="Mercury">
+            </div>
+            <div id="venus-orbit" class="orbit">
+                <img src="./images/Venus.webp" id="venus" class="planet" alt="Venus">
+            </div>
+            <div id="earth-orbit" class="orbit">
+                <img src="./images/Earth.webp" id="earth" class="planet" alt="Earth">
+            </div>
+            <div id="mars-orbit" class="orbit">
+                <img src="./images/Mars.webp" id="mars" class="planet" alt="Mars">
+            </div>
+            <div id="jupiter-orbit" class="orbit">
+                <img src="./images/jupiter.webp" id="jupiter" class="planet" alt="Jupiter">
+            </div>
+            <div id="saturn-orbit" class="orbit">
+                <img src="./images/saturn-removebg-preview.png" id="saturn" class="planet" alt="Saturn">
+            </div>
+            <div id="uranus-orbit" class="orbit">
+                <img src="./images/uranus.webp" id="uranus" class="planet" alt="Uranus">
+            </div>
+            <div id="neptune-orbit" class="orbit">
+                <img src="./images/neptune.webp" id="neptune" class="planet" alt="Neptune">
+            </div>
         </div>
-        <div id="venus-orbit" class="orbit">
-            <img src="./images/Venus.webp" id="venus" class="planet" alt="Venus">
-        </div>
-        <div id="earth-orbit" class="orbit">
-            <img src="./images/Earth.webp" id="earth" class="planet" alt="Earth">
-        </div>
-        <div id="mars-orbit" class="orbit">
-            <img src="./images/Mars.webp" id="mars" class="planet" alt="Mars">
-        </div>
-        <div id="jupiter-orbit" class="orbit">
-            <img src="./images/jupiter.webp" id="jupiter" class="planet" alt="Jupiter">
-            
-        </div>
-        <div id="saturn-orbit" class="orbit">
-            <img src="./images/saturn-removebg-preview.png" id="saturn" class="planet" alt="Saturn">
-        </div>
-        <div id="uranus-orbit" class="orbit">
-            <img src="./images/uranus.webp" id="uranus" class="planet" alt="Uranus">
-        </div>
-        <div id="neptune-orbit" class="orbit">
-            <img src="./images/neptune.webp" id="neptune" class="planet" alt="Neptune">
-        </div>
-    </div>
+    </section>
+
+    <!-- Planet Info Section -->
+    
+    <!-- Footer -->
+    <footer>
+        <div class="copywrite"> &copy; Cosmic Programmers 2024</div>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
