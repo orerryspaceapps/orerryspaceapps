@@ -42,6 +42,7 @@ body {
     top: 50%;
     left: 0;
     border-radius: 50%;
+    margin: -10px;
     transform: translate(-50%, -50%);
     transition: transform 0.2s ease-in-out;
 }
@@ -88,8 +89,8 @@ body {
 }
 
 #venus-orbit {
-    width: 180px;
-    height: 180px;
+    width: 179px;
+    height: 179px;
     margin-left: -90px;
     margin-top: -90px;
     animation: rotate 18s linear infinite;
@@ -147,56 +148,56 @@ body {
 #mercury {
     width: 10px;
     height: 10px;
-    background-color: #888;
+    background-color:transparent;
     animation: rotate 10s linear infinite reverse;
 }
 
 #venus {
     width: 15px;
     height: 15px;
-    background-color: #e6e6a1;
+    background-color: transparent;
     animation: rotate 18s linear infinite reverse;
 }
 
 #earth {
     width: 16px;
     height: 16px;
-    background-color: #4ca6ff;
+    background-color: transparent;
     animation: rotate 30s linear infinite reverse;
 }
 
 #mars {
     width: 14px;
     height: 14px;
-    background-color: #ff6b3d;
+    background-color: transparent;
     animation: rotate 56s linear infinite reverse;
 }
 
 #jupiter {
     width: 36px;
     height: 36px;
-    background-color: #e0ae6f;
+    background-color: transparent;
     animation: rotate 120s linear infinite reverse;
 }
 
 #saturn {
     width: 30px;
     height: 30px;
-    background-color: #f4d47a;
+    background-color: transparent;
     animation: rotate 150s linear infinite reverse;
 }
 
 #uranus {
     width: 26px;
     height: 26px;
-    background-color: #b3e5fc;
+    background-color: transparent;
     animation: rotate 210s linear infinite reverse;
 }
 
 #neptune {
     width: 24px;
     height: 24px;
-    background-color: #82b1ff;
+    background-color: transparent;
     animation: rotate 300s linear infinite reverse;
 }
 
@@ -211,7 +212,4 @@ body {
         width: 90vw;
         height: 90vw;
     }
-}
-.navbar{
-    
 }
