@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,47 +9,85 @@
     <style>
         /* Planet Info Section */
         #planet-info {
-            background-color: #f4f4f4; /* Light background for contrast */
-            border: 1px solid #ccc; /* Light border */
-            border-radius: 8px; /* Rounded corners */
-            padding: 20px; /* Padding around the content */
-            margin: 20px; /* Margin for spacing */
-            width: 300px; /* Fixed width for consistency */
-            position: absolute; /* Position it absolutely to place it where needed */
-            right: 20px; /* Align to the right */
-            top: 100px; /* Space from the top */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-            z-index: 10; /* Ensure it appears above other elements */
-            display: none; /* Initially hidden */
+            background-color: #f4f4f4;
+            /* Light background for contrast */
+            border: 1px solid #ccc;
+            /* Light border */
+            border-radius: 8px;
+            /* Rounded corners */
+            padding: 20px;
+            /* Padding around the content */
+            margin: 20px;
+            /* Margin for spacing */
+            width: 300px;
+            /* Fixed width for consistency */
+            position: absolute;
+            /* Position it absolutely to place it where needed */
+            right: 20px;
+            /* Align to the right */
+            top: 100px;
+            /* Space from the top */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            /* Soft shadow for depth */
+            z-index: 10;
+            /* Ensure it appears above other elements */
+            display: none;
+            /* Initially hidden */
         }
 
         #planet-info h2 {
-            color: #333; /* Darker color for the title */
-            text-align: center; /* Center the title */
+            color: #333;
+            /* Darker color for the title */
+            text-align: center;
+            /* Center the title */
         }
 
         #info-display {
-            margin-top: 10px; /* Space above the details */
+            margin-top: 10px;
+            /* Space above the details */
         }
 
         #planet-name {
-            font-size: 1.5em; /* Larger font size for the planet name */
-            color: #2a8dc2; /* Color for the planet name */
-            margin-bottom: 10px; /* Space below the name */
-            text-align: center; /* Center the name */
+            font-size: 1.5em;
+            /* Larger font size for the planet name */
+            color: #2a8dc2;
+            /* Color for the planet name */
+            margin-bottom: 10px;
+            /* Space below the name */
+            text-align: center;
+            /* Center the name */
         }
 
         #planet-description {
-            font-size: 1em; /* Standard font size for the description */
-            color: #555; /* Gray color for the text */
-            line-height: 1.5; /* Line height for better readability */
+            font-size: 1em;
+            /* Standard font size for the description */
+            color: #555;
+            /* Gray color for the text */
+            line-height: 1.5;
+            /* Line height for better readability */
         }
+
+        .navbar button {
+            background-color: #2a8dc2;
+            color: antiquewhite;
+            margin: 20px;
+            padding: 20px;
+            border: #2a8dc2;
+            border-radius: 15px;
+        }
+
+        button:hover {
+            background-color: #6bb8e1;
+            color: aliceblue;
+        }
+
     </style>
 </head>
 
 <body>
     <!-- Navbar -->
     <div class="navbar">
+        <button><a href="neos.html">NEO'S</a></button>
         <div class="logo"><img src="images/pngwing.com.png" alt="NASA logo"></div>
         <div class="second-logo"><img src="images/pngwing.com (1).png" alt="Logo"></div>
     </div>
@@ -56,7 +95,6 @@
     <!-- Intro Section -->
     <section class="intro">
         <h1>Welcome to the Planetary Orbits</h1>
-        <p>Explore the movements of planets. Click on each planet to learn more!</p>
     </section>
 
     <!-- Solar System Display -->
@@ -142,36 +180,33 @@
         };
 
         // Function to display planet details
-        function displayPlanetDetails(planet) {
+        function displayPlanetDetails(planetId) {
             const planetName = document.getElementById('planet-name');
             const planetDescription = document.getElementById('planet-description');
             const planetInfoSection = document.getElementById('planet-info');
 
-            // Check if the planet exists in the details
-            if (planetDetails[planet]) {
-                // Update planet details
-                planetName.textContent = planetDetails[planet].name;
-                planetDescription.textContent = planetDetails[planet].description;
+            // Update the planet details if found
+            if (planetDetails[planetId]) {
+                planetName.textContent = planetDetails[planetId].name;
+                planetDescription.textContent = planetDetails[planetId].description;
 
                 // Show the planet info section
                 planetInfoSection.style.display = 'block';
             } else {
-                console.error(`No details found for planet: ${planet}`);
+                console.error(`No details found for planet: ${planetId}`);
             }
 
-            // Log the planet clicked for debugging
-            console.log(`Displayed details for: ${planetDetails[planet].name}`);
+            console.log(`Displayed details for: ${planetId}`);
         }
 
         // Add click event listeners to each planet
         document.querySelectorAll('.planet').forEach(planet => {
-            planet.addEventListener('click', (event) => {
-                event.preventDefault();
-                const planetId = planet.id; // Get planet name from id
-                console.log(`Planet clicked: ${planetId}`); // Log clicked planet for debugging
+            planet.addEventListener('click', function () {
+                const planetId = this.id.toLowerCase(); // Convert the id to lowercase
                 displayPlanetDetails(planetId);
             });
         });
     </script>
 </body>
+
 </html>
